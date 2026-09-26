@@ -5,19 +5,81 @@ export default function HomePage() {
   return (
     <main className="container home-page">
 
-      {/* HEADER */}
+      {/* =========================================
+          TOP BAR
+          โลโก้เล็ก + สถานะระบบ
+      ========================================= */}
       <header className="site-topbar">
         <Brand compact />
 
-        <div className="topbar-right">
-          <span className="status-dot" />
-          <span>ONLINE</span>
-        </div>
+        <span className="status-chip">
+          <span className="status-dot"></span>
+          ONLINE
+        </span>
       </header>
 
 
-      {/* HERO */}
-      <section className="hero-card modern-hero">
+      {/* =========================================
+          HOW IT WORKS
+          อยู่ใต้โลโก้เล็กทันที
+      ========================================= */}
+      <section className="flow-card">
+
+        <div className="flow-heading">
+          <div className="eyebrow">
+            HOW IT WORKS
+          </div>
+
+          <h2>
+            สั่งอาหารง่ายในไม่กี่ขั้นตอน
+          </h2>
+        </div>
+
+        <div className="flow-steps">
+
+          <span>
+            <small>01</small>
+            เปิดโต๊ะ
+          </span>
+
+          <b>→</b>
+
+          <span>
+            <small>02</small>
+            สแกน QR
+          </span>
+
+          <b>→</b>
+
+          <span>
+            <small>03</small>
+            สั่งอาหาร
+          </span>
+
+          <b>→</b>
+
+          <span>
+            <small>04</small>
+            ครัวทำอาหาร
+          </span>
+
+          <b>→</b>
+
+          <span>
+            <small>05</small>
+            เสิร์ฟ
+          </span>
+
+        </div>
+
+      </section>
+
+
+      {/* =========================================
+          HERO
+          ส่วนแนะนำร้าน + โลโก้ใหญ่
+      ========================================= */}
+      <section className="hero-card">
 
         <div className="hero-copy">
 
@@ -42,7 +104,7 @@ export default function HomePage() {
               className="hero-primary"
             >
               <SectionIcon type="menu" />
-              ดูเมนูอาหาร
+              ดูหน้าสั่งอาหาร
             </Link>
 
             <Link
@@ -58,120 +120,97 @@ export default function HomePage() {
         </div>
 
 
-        {/* LOGO */}
-        <div className="hero-logo-box">
+        {/* โลโก้ใหญ่ */}
+        <div className="hero-brand-art">
           <Brand />
         </div>
 
       </section>
 
 
-      {/* HOW IT WORKS */}
-      <section className="flow-card">
-
-        <div>
-          <div className="eyebrow">
-            HOW IT WORKS
-          </div>
-
-          <h2>
-            สั่งอาหารง่ายในไม่กี่ขั้นตอน
-          </h2>
-        </div>
-
-        <div className="flow-steps">
-
-          <span>
-            <b>01</b>
-            เปิดโต๊ะ
-          </span>
-
-          <b className="flow-arrow">→</b>
-
-          <span>
-            <b>02</b>
-            สแกน QR
-          </span>
-
-          <b className="flow-arrow">→</b>
-
-          <span>
-            <b>03</b>
-            สั่งอาหาร
-          </span>
-
-          <b className="flow-arrow">→</b>
-
-          <span>
-            <b>04</b>
-            ครัวทำอาหาร
-          </span>
-
-          <b className="flow-arrow">→</b>
-
-          <span>
-            <b>05</b>
-            เสิร์ฟ
-          </span>
-
-        </div>
-
-      </section>
-
-
-      {/* FEATURES */}
+      {/* =========================================
+          FEATURE CARDS
+      ========================================= */}
       <section className="feature-grid">
 
+
+        {/* จัดการโต๊ะ */}
         <Link
           href="/generate-qr"
           className="feature-card feature-red"
         >
+
           <div className="feature-icon">
             <SectionIcon type="table" />
           </div>
 
           <div>
-            <h2>จัดการโต๊ะ</h2>
+
+            <h2>
+              จัดการโต๊ะ
+            </h2>
+
             <p>
               เปิดโต๊ะ ระบุจำนวนผู้ใหญ่และเด็ก
-              พร้อมสร้าง QR
+              พร้อมสร้าง QR สำหรับลูกค้า
             </p>
+
           </div>
+
         </Link>
 
 
+        {/* จอครัว */}
         <Link
           href="/kitchen"
           className="feature-card feature-blue"
         >
+
           <div className="feature-icon">
             <SectionIcon type="kitchen" />
           </div>
 
           <div>
-            <h2>จอครัว</h2>
+
+            <h2>
+              จอครัว
+            </h2>
+
             <p>
-              รับออเดอร์และติดตามสถานะแบบเรียลไทม์
+              รับออเดอร์ เปลี่ยนสถานะ
+              และติดตามงานแบบเรียลไทม์
             </p>
+
           </div>
+
         </Link>
 
 
+        {/* Dashboard */}
         <Link
           href="/dashboard"
           className="feature-card feature-gold"
         >
+
           <div className="feature-icon">
             <SectionIcon type="dashboard" />
           </div>
 
           <div>
-            <h2>Dashboard</h2>
+
+            <h2>
+              Dashboard
+            </h2>
+
             <p>
-              ดูยอดขาย ออเดอร์ และโต๊ะที่กำลังใช้งาน
+              ดูยอดขาย จำนวนออเดอร์
+              และโต๊ะที่กำลังใช้งาน
             </p>
+
           </div>
+
         </Link>
+
 
       </section>
 
