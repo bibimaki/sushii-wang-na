@@ -4,62 +4,45 @@ import { Brand, SectionIcon } from "@/components/Brand";
 export default function HomePage() {
   return (
     <main className="container home-page">
-      {/* =========================
-          TOP BAR
-      ========================== */}
+
+      {/* HEADER */}
       <header className="site-topbar">
         <Brand compact />
-        <span className="status-chip">SYSTEM ONLINE</span>
+
+        <div className="topbar-right">
+          <span className="status-dot" />
+          <span>ONLINE</span>
+        </div>
       </header>
 
-      {/* =========================
-          HOW IT WORKS — ย้ายขึ้นบนสุด
-      ========================== */}
-      <section className="flow-card">
-        <div>
-          <div className="eyebrow">HOW IT WORKS</div>
-          <h2>ขั้นตอนการใช้งาน</h2>
-        </div>
 
-        <div className="flow-steps">
-          <span>01 เปิดโต๊ะ</span>
-          <b>→</b>
+      {/* HERO */}
+      <section className="hero-card modern-hero">
 
-          <span>02 ลูกค้าสแกน QR</span>
-          <b>→</b>
-
-          <span>03 สั่งอาหาร</span>
-          <b>→</b>
-
-          <span>04 ครัวทำอาหาร</span>
-          <b>→</b>
-
-          <span>05 เสิร์ฟ</span>
-        </div>
-      </section>
-
-      {/* =========================
-          HERO
-      ========================== */}
-      <section className="hero-card">
         <div className="hero-copy">
+
           <div className="eyebrow">
             SUSHI • JAPANESE RESTAURANT
           </div>
 
-          <h1>ซูชิวังหน้า</h1>
+          <h1>
+            ซูชิวังหน้า
+          </h1>
 
           <p>
-            ระบบสั่งอาหารผ่าน QR พร้อมจอครัวแบบเรียลไทม์
+            อร่อยง่าย สั่งอาหารผ่าน QR
+            <br />
+            พร้อมระบบครัวแบบเรียลไทม์
           </p>
 
           <div className="hero-actions">
+
             <Link
               href="/order/20"
               className="hero-primary"
             >
               <SectionIcon type="menu" />
-              ดูหน้าสั่งอาหาร
+              ดูเมนูอาหาร
             </Link>
 
             <Link
@@ -69,18 +52,76 @@ export default function HomePage() {
               <SectionIcon type="qr" />
               เปิดโต๊ะ / สร้าง QR
             </Link>
+
           </div>
+
         </div>
 
-        <div className="hero-brand-art">
+
+        {/* LOGO */}
+        <div className="hero-logo-box">
           <Brand />
         </div>
+
       </section>
 
-      {/* =========================
-          FEATURES
-      ========================== */}
+
+      {/* HOW IT WORKS */}
+      <section className="flow-card">
+
+        <div>
+          <div className="eyebrow">
+            HOW IT WORKS
+          </div>
+
+          <h2>
+            สั่งอาหารง่ายในไม่กี่ขั้นตอน
+          </h2>
+        </div>
+
+        <div className="flow-steps">
+
+          <span>
+            <b>01</b>
+            เปิดโต๊ะ
+          </span>
+
+          <b className="flow-arrow">→</b>
+
+          <span>
+            <b>02</b>
+            สแกน QR
+          </span>
+
+          <b className="flow-arrow">→</b>
+
+          <span>
+            <b>03</b>
+            สั่งอาหาร
+          </span>
+
+          <b className="flow-arrow">→</b>
+
+          <span>
+            <b>04</b>
+            ครัวทำอาหาร
+          </span>
+
+          <b className="flow-arrow">→</b>
+
+          <span>
+            <b>05</b>
+            เสิร์ฟ
+          </span>
+
+        </div>
+
+      </section>
+
+
+      {/* FEATURES */}
       <section className="feature-grid">
+
         <Link
           href="/generate-qr"
           className="feature-card feature-red"
@@ -92,11 +133,12 @@ export default function HomePage() {
           <div>
             <h2>จัดการโต๊ะ</h2>
             <p>
-              เปิดโต๊ะ ระบุจำนวนผู้ใหญ่/เด็ก
-              และสร้าง QR สำหรับลูกค้า
+              เปิดโต๊ะ ระบุจำนวนผู้ใหญ่และเด็ก
+              พร้อมสร้าง QR
             </p>
           </div>
         </Link>
+
 
         <Link
           href="/kitchen"
@@ -109,11 +151,11 @@ export default function HomePage() {
           <div>
             <h2>จอครัว</h2>
             <p>
-              รับออเดอร์ เปลี่ยนสถานะ
-              และติดตามงานแบบเรียลไทม์
+              รับออเดอร์และติดตามสถานะแบบเรียลไทม์
             </p>
           </div>
         </Link>
+
 
         <Link
           href="/dashboard"
@@ -126,12 +168,13 @@ export default function HomePage() {
           <div>
             <h2>Dashboard</h2>
             <p>
-              ดูยอดขาย จำนวนออเดอร์
-              และโต๊ะที่กำลังใช้งาน
+              ดูยอดขาย ออเดอร์ และโต๊ะที่กำลังใช้งาน
             </p>
           </div>
         </Link>
+
       </section>
+
     </main>
   );
 }
