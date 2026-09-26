@@ -7,19 +7,9 @@ export function Brand({ compact = false }) {
     <div className={compact ? "brand brand-compact" : "brand"}>
       <img
         src={LOGO}
-        alt="Sushi Wang Na"
+        alt="ซูชิวังหน้า"
         className="brand-logo"
       />
-
-      {!compact && (
-        <div className="brand-text">
-          <div className="brand-en">SUSHI WANG NA</div>
-          <div className="brand-th">ซูชิ วังหน้า</div>
-          <div className="brand-sub">
-            SUSHI • JAPANESE RESTAURANT
-          </div>
-        </div>
-      )}
     </div>
   );
 }
@@ -49,16 +39,20 @@ export function TitleBlock({
 }
 
 export function SectionIcon({ type }) {
+  const common = {
+    width: 20,
+    height: 20,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+  };
+
   if (type === "menu") {
     return (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
+      <svg {...common}>
         <path d="M4 4v16" />
         <path d="M8 4v7a2 2 0 0 0 4 0V4" />
         <path d="M10 4v7" />
@@ -70,14 +64,7 @@ export function SectionIcon({ type }) {
 
   if (type === "qr") {
     return (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
+      <svg {...common}>
         <rect x="4" y="4" width="6" height="6" />
         <rect x="14" y="4" width="6" height="6" />
         <rect x="4" y="14" width="6" height="6" />
@@ -90,14 +77,7 @@ export function SectionIcon({ type }) {
 
   if (type === "table") {
     return (
-      <svg
-        width="22"
-        height="22"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
+      <svg {...common}>
         <rect x="3" y="5" width="18" height="4" rx="1" />
         <path d="M6 9v10" />
         <path d="M18 9v10" />
@@ -108,14 +88,7 @@ export function SectionIcon({ type }) {
 
   if (type === "kitchen") {
     return (
-      <svg
-        width="22"
-        height="22"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
+      <svg {...common}>
         <path d="M6 3v8" />
         <path d="M9 3v8" />
         <path d="M12 3v8" />
@@ -127,14 +100,7 @@ export function SectionIcon({ type }) {
 
   if (type === "dashboard") {
     return (
-      <svg
-        width="22"
-        height="22"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
+      <svg {...common}>
         <rect x="3" y="3" width="18" height="18" rx="2" />
         <path d="M7 15v3" />
         <path d="M11 11v7" />
